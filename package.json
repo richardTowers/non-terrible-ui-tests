@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "dependencies": {
+    "webdriver-manager": "^7.0.1",
+    "webdriverio": "^3.2.1"
+  }
+}

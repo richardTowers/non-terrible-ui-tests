@@ -33,7 +33,30 @@ Who thinks their tests could be better?
 
 Who thinks their tests are terrible?
 
-Why are UI tests so awful?
+What is Selenium?
+-----------------------------------
+
+A tool for automating web sites.
+
+Example:
+
+```
+// Don't forget to start the selenium server in another tab!
+{
+var webdriverio = require('webdriverio'),
+	client = webdriverio.remote({
+		desiredCapabilities: { browserName: 'chrome' }
+	});
+ 
+client.init()
+    .url('http://www.meetup.com/SoftwareTestingClub/events/224490861/')
+	.getTitle()
+	.then(x => console.log('The title was: ' + x))
+    .end();
+}
+```
+
+Some Examples from The Past
 -----------------------------------
 
 
