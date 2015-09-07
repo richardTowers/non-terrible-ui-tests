@@ -38,20 +38,25 @@ What is Selenium?
 
 A tool for automating web sites.
 
-Examples:
+Commonly used for testing.
 
-<code>
+Works across browsers and devices.
+
+Basic Examples
+-----------------------------------
+
+<script>
 var webdriverio = require('webdriverio'),
 	client = webdriverio.remote({ desiredCapabilities: { browserName: 'chrome' } });
  
 client.init()
     .url('http://www.meetup.com/SoftwareTestingClub/events/224490861/')
 	.getTitle()
-	.then(x => console.log('The title was: ' + x))
+	.then(x => console.log('// The title was: ' + x))
     .end();
-</code>
+</script>
 
-<code>
+<script>
 var webdriverio = require('webdriverio'),
 	credentials = require('./credentials.js'),
 	client = webdriverio.remote({ desiredCapabilities: { browserName: 'chrome' } });
@@ -66,10 +71,9 @@ client.init()
 	.setValue('[name=newComment]', 'Hello from Selenium!')
 	//.click('.j-submit-comment')
 	.getTitle()
-	.then(x => console.log(x))
+	.then(x => console.log('// ' + x))
     .end();
-
-</code>
+</script>
 
 Some Examples from The Past
 -----------------------------------
