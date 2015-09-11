@@ -75,7 +75,66 @@ client.init()
     .end();
 </script>
 
-Some Examples from The Past
+Already this is getting a bit terrible.
+
+Painting lines
 -----------------------------------
 
+Tell non-racist non-sexist joke.
+
+"Real World" examples
+-----------------------------------
+
+Consider an insurance website:
+
+http://www.comparethemarket.com/
+
+(Other insurance websites are available)
+
+### Simplest thing
+
+> As a new user I want to get a quote for travel insurance so that I can decide whether to buy it.
+
+* Go to https://travel.comparethemarket.com/PolicyDetails
+* Fill in valid details
+* Click get quotes
+* Check that quotes eventually appear
+
+### More complex
+
+> As an existing user with saved quotes I want to be able to see my previous quotes so that I can come back later.
+
+* Register for an account
+* Somehow follow the link in the signup email???
+* Log in
+* Go to https://travel.comparethemarket.com/PolicyDetails
+* Fill in valid details
+* Click get quotes
+* Check that quotes eventually appear
+* Save quotes
+* Log out
+* Log back in
+* Go to quotes page
+* Check that quotes appear
+
+### Ludicrous complexity
+
+> As an existing user with an expired policy I want to be able to process a renewal so that I always have insurance.
+
+* Register for an account
+* Somehow follow the link in the signup email???
+* Log in
+* Go to https://travel.comparethemarket.com/PolicyDetails
+* Fill in valid details
+* Click get quotes
+* Check that quotes eventually appear
+* Save quotes
+* Log out
+* WAIT FOR POLICY TO EXPIRE
+* Log back in
+* Go to quotes page
+* Check that quotes appear
+
+How do we resolve this?
+----------------------------------- 
 
