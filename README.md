@@ -33,6 +33,17 @@ Who thinks their tests could be better?
 
 Who thinks their tests are terrible?
 
+Guiding prinicples of UI tests
+-----------------------------------
+
+UI Tests should be:
+
+* Fast
+* Repeatable
+* Independant
+* Easy to understand
+* Easy to maintain
+
 What is Selenium?
 -----------------------------------
 
@@ -76,6 +87,8 @@ client.init()
 </script>
 
 Already this is getting a bit terrible.
+
+Really we just want to test that I can leave a comment, but first we have to log in.
 
 Painting lines
 -----------------------------------
@@ -152,7 +165,7 @@ Get your developers to build a system that doesn't suck
 
 ### Ideal world
 
-System is layered in a way that makes separating the front end from the back end
+System is layered in a way that makes separating the front end from the back end easy
 
 * Test the UI in total isolation from the back end. Mock all calls to the API
 * Write a *few* true end-to-end tests to make sure the whole system works
@@ -177,3 +190,29 @@ System is a monolith, no way of manipulating data except through the UI
 ** Tests that change state in a way that might break later tests
 * Try and get your developers to build an API that you can use to set up state.
 * Try to get your developers to build test-only features to turn off things like Authentication so you don't have to keep logging in.
+
+How should we actually write tests?
+-----------------------------------
+
+If we separate out our data set up then our tests should be fast, repeatable and independant.
+
+What about maintainable? What about understandable?
+
+Writing automated tests is writing software. Writing software is hard. 
+
+"Page Objects"
+-----------------------------------
+
+Idea is to separate knowledge of how to interact with the UI from the tests that describe what the UI should do.
+
+Example from above:
+
+<script>
+class LoginPage {
+	constructor (client) {
+	}
+}
+
+const page = new LoginPage(client.init());
+</script>
+
